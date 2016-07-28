@@ -1,0 +1,48 @@
+$btnHeight = 30
+$primaryColor = #026aa7
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-size: 1rem
+
+html, #tinning-app, .app-wrapper
+  position: relative
+  width: 400px
+  height: 550px
+  background-color: rgb(204, 109, 109, .6)
+  font-size: 16px
+  font-size: 62.5%
+  font-family: "Helvetica Neue",Arial,Helvetica,sans-serif
+  line-height: 1.4
+  margin: 0 auto
+  color: #fff
+
+a
+  text-decoration: none
+  &:active, &:hover, &:link
+    color: #666
+
+ul li
+  list-style: none
+
+.btn
+  position: relative
+  color: #fff
+  font-weight: bolder
+  text-align: center
+  line-height: unit($btnHeight, px)
+  background: linear-gradient(to bottom,rgba(255,255,255,.3) 0,rgba(255,255,255,.2) 100%)
+  padding: 0 10px
+  border-radius: 3px
+  height: 16px
+.icon-btn
+  @extends .btn
+  height: 16px
+  padding: 0
+  font-size: 0
+  img
+    position: relative
+    height: 100%
+    text-align: center

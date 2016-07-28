@@ -1,0 +1,94 @@
+@import '../../assets/css/vars.styl'
+
+$headerHeight = 40
+$btnHeight = 30
+
+$headerPadding = unit(5, px)
+
+.header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  display: flex
+  line-height: unit($headerHeight, px)
+  background-color: #fff
+  z-index: 10
+  font-size: 1.6rem
+  a
+    &:active, &:hover, &:link
+      color: #ddd
+.search-bar
+  order: 1
+  flex: 1 0 auto
+  margin: $headerPadding
+  height: unit($btnHeight, px)
+  &::after
+    content ''
+    color: #ddd
+    position: absolute
+    right: $headerPadding + 4
+    top: 12px
+    width: 16px
+    height: 16px
+    line-height: 16px
+    background-image: url('../../assets/icons/list-type-text.png')
+    background-size: 16px 16px
+    background-position: 0 0
+    background-repeat: no-repeat
+    border-top-right-radius: 3px
+    border-bottom-right-radius: 3px
+  input
+    position: relative
+    height: 100%
+    padding: 0 (18 + 8)px 0 8px
+    border-radius: 3px
+    border: none
+    color: #ddd
+    background-color: rgba(255, 255, 255, .22)
+.left-toolbar
+  width: 64px
+  order: 0
+  z-index: 2
+  font-size: 0
+.right-toolbar
+  width: 64px
+  order: 2
+  z-index: 2
+  font-size: 0
+  .tin-btn
+    border: 1px solid $primaryColor
+    color: $primaryColor
+    font-size: 1.8rem
+    height: auto
+.list-type-present
+  position: relative
+  height: 100%
+  width: 64px
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  margin-left: 5px
+  &:hover
+    .icon-btn
+      width: auto
+      height: 16px
+      &:last-child
+        width: auto
+        height: 16px
+  .icon-btn
+    position: relative
+    transition: .1s ease
+    &:last-child
+      width: 0
+      height: 0
+.logo
+  flex: 1 0 auto
+  text-align: center
+  color: darken(#ddd, 20%)
+  opacity: .8
+  font-size: 2rem
+  vertical-align: middle
+  line-height: unit($headerHeight, px)
+  z-index: 1
+  letter-spacing: 2px
